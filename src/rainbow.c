@@ -105,18 +105,18 @@ void change_rainbow_performance() {
     config_name = "Circle clockwise";
     break;
   case 1:
-    port_b = walking_b;
-    port_d = walking_d;
-    delay_func = fast_delay;
-    perf_length = sizeof(walking_b) / sizeof(walking_b[0]);
-    config_name = "Walking across";
-    break;
-  case 2:
     port_b = circle_1_b;
     port_d = circle_1_d;
     delay_func = fast_delay;
     perf_length = sizeof(circle_1_b) / sizeof(circle_1_b[0]);
     config_name = "Circle anticlockwise";
+    break;
+  case 2:
+    port_b = walking_b;
+    port_d = walking_d;
+    delay_func = slow_delay;
+    perf_length = sizeof(walking_b) / sizeof(walking_b[0]);
+    config_name = "Walking across";
     break;
   case 3:
     port_b = snake_b;
