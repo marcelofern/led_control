@@ -61,7 +61,8 @@ tests: $(TEST_BIN)
 # Necessary if using clangd as a Language Server Protocol.
 compile_commands.json: clean
 	bear --output src/compile_commands.json -- make
-	bear --output tests/compile_commands.json -- make tests
+	# Tests are skipped because there ain't any at the moment!
+	# bear --output tests/compile_commands.json -- make tests
 
 clean:
 	rm -rf build
